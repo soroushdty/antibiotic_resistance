@@ -23,7 +23,7 @@ CSV files used
 
 |CSV name|columns used|variable extracted|
 |---|---|---|
-|[microbiologyevents](https://mimic.mit.edu/docs/iv/modules/hosp/microbiologyevents)|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name','org_name', 'ab_name', 'comments','interpretation', 'dilution_text', 'dilution_comparison', 'dilution_value'|"antibiotic"|
+|[microbiologyevents](https://mimic.mit.edu/docs/iv/modules/hosp/microbiologyevents)|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name','org_name', 'ab_name', 'interpretation', 'comments'|"antibiotic"|
 |[labevents](https://mimic.mit.edu/docs/iv/modules/hosp/labevents)|||
 |[d_labitems](https://mimic.mit.edu/docs/iv/modules/hosp/d_labitems)|||
 |[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|||
