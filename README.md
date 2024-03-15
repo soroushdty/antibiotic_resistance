@@ -21,9 +21,9 @@ Immunology (CMV)
 ### table 2
 CSV files used
 
-|CSV|columns|variables|metadata|
+|CSV|columns|class|attributes|
 |---|---|---|---|
-|[microbiologyevents](https://mimic.mit.edu/docs/iv/modules/hosp/microbiologyevents)|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name', 'org_name', 'ab_name', 'interpretation', 'comments'|antibiotic||
+|[microbiologyevents](https://mimic.mit.edu/docs/iv/modules/hosp/microbiologyevents)|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name', 'org_name', 'ab_name', 'interpretation', 'comments'|culture|subject, hadm, sampleid, date, fluid, positive, organism, antibiotic, resistant|
 |[labevents](https://mimic.mit.edu/docs/iv/modules/hosp/labevents)|'subject_id', 'hadm_id', 'specimen_id', 'itemid', 'charttime', 'value', 'valuenum', 'valueuom', 'comments'||
 |[d_labitems](https://mimic.mit.edu/docs/iv/modules/hosp/d_labitems)|'itemid', 'label', 'fluid'|||
 |[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|'subject_id', 'gender', 'anchor_age'|||
