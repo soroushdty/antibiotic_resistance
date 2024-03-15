@@ -5,7 +5,7 @@ The sample must be taken at least 48 hours after ICU admission
 
 ### Table 1: Sample Types
 
-|Sample type|Frequency|spec_type_desc|test_name|
+|Type|Frequency|spec_type_desc|test_name|
 |---|---|---|---|
 |Urine|545,738|'URINE'|'URINE CULTURE', 'FLUID CULTURE'|
 |Blood|104,344|'BLOOD CULTURE'|'Blood Culture, Routine', 'AEROBIC BOTTLE', 'ANAEROBIC BOTTLE','ANAEROBIC CULTURE'|
