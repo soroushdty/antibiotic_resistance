@@ -3,16 +3,14 @@ This vanilla version is trained on X test results (table 1) from ICU patients in
 The sample must be taken at least 48 hours after ICU admission
  
 
-### table 1
-Sample types
+### Table 1: Sample Types
 
 |Sample type|Frequency|spec_type_desc|test_name|
 |---|---|---|---|
 |Urine|545,738|'URINE'|'URINE CULTURE', 'FLUID CULTURE'|
 |Blood|104,344|'BLOOD CULTURE'|'Blood Culture, Routine', 'AEROBIC BOTTLE', 'ANAEROBIC BOTTLE','ANAEROBIC CULTURE'|
 
-### table 2
-CSV files used
+### table 2: CSV Files
 
 |CSV|columns|class|attributes|
 |---|---|---|---|
