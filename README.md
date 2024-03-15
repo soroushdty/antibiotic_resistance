@@ -2,8 +2,8 @@
 This vanilla version is trained on X test results (table 1) from ICU patients in the MIMIC-IV dataset.
 The sample must be taken at least 48 hours after ICU admission
 
-**table 1**
-Sample types
+## table 1
+<br /> Sample types
 
 |Sample type|Frequency|microbiologyevents.spec_type_desc|
 |---|---|---|
@@ -19,7 +19,7 @@ Blood (CMV AB)
 Immunology (CMV)
 
 **table 2**
-CSV files used
+<br /> CSV files used
 
 |CSV name|columns used|variable extracted|
 |---|---|---|
@@ -31,14 +31,14 @@ CSV files used
 |[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|||
 ||||
 
-hosp <b>
+hosp <br />
 [transfers](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 [emar](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 [emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 [pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 [prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 
-icu \n
+icu <br />
 [icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays) : subject_id hadm_id stay_id first_careunit last_careunit intime outtime los
 [d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)
 [chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)
@@ -49,7 +49,7 @@ icu \n
 [procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)
 
 **table 3**
-variables
+<br /> variables
 
 |variable type|variable name|csv used|
 |---|---|---|
@@ -62,7 +62,6 @@ variables
 
 
 **MIMIC-IV reference**
-\n
-[physionet dataset](https://physionet.org/content/mimiciv/2.2/) \n
+<br /> [physionet dataset](https://physionet.org/content/mimiciv/2.2/) <br />
 [article](https://www.nature.com/articles/s41597-022-01899-x)
 
