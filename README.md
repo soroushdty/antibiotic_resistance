@@ -2,7 +2,7 @@
 This vanilla version is trained on X test results (table 1) from ICU patients in the MIMIC-IV dataset.
 The sample must be taken at least 48 hours after ICU admission
 
-## table 1
+### table 1
 <br /> Sample types
 
 |Sample type|Frequency|microbiologyevents.spec_type_desc|
@@ -18,7 +18,7 @@ Blood (EBV)
 Blood (CMV AB)
 Immunology (CMV)
 
-**table 2**
+### table 2
 <br /> CSV files used
 
 |CSV name|columns used|variable extracted|
@@ -48,7 +48,7 @@ icu <br />
 [outputevents](https://mimic.mit.edu/docs/iv/modules/icu/outputevents)
 [procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)
 
-**table 3**
+### table 3
 <br /> variables
 
 |variable type|variable name|csv used|
@@ -61,7 +61,7 @@ icu <br />
 ||||
 
 
-**MIMIC-IV reference**
+### MIMIC-IV reference
 <br /> [physionet dataset](https://physionet.org/content/mimiciv/2.2/) <br />
 [article](https://www.nature.com/articles/s41597-022-01899-x)
 
