@@ -30,9 +30,9 @@ CSV files used
 |[admissions](https://mimic.mit.edu/docs/iv/modules/hosp/admissions)|'subject_id', 'hadm_id', 'admittime', 'dischtime', 'admission_type', 'admission_location', 'discharge_location', 'marital_status', 'race', 'hospital_expire_flag'||mortality|
 |[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|'subject_id', 'chartdate', 'result_name', 'result_value'|BMI, BP||
 |[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|'subject_id, 'hadm_id', 'stay_id', 'intime', 'outtime', 'los'|||
+|[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)|'subject_id', 'hadm_id', 'transfer_id', 'eventtype', 'careunit', 'intime', 'outtime'|||
 
-hosp <br />
-[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)
+MEDICATION <br />
 [emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)
 [emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/emar_details)
 [pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)
