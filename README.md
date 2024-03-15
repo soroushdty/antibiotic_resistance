@@ -32,11 +32,11 @@ CSV files used
 |[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|'subject_id, 'hadm_id', 'stay_id', 'intime', 'outtime', 'los'|||
 
 hosp <br />
-[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
-[emar](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
-[emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
-[pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
-[prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
+[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)
+[emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)
+[emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/emar_details)
+[pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)
+[prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)
 
 icu <br />
 
