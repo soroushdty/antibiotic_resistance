@@ -23,10 +23,7 @@ CSV files used
 
 |CSV name|columns used|variable extracted|
 |---|---|---|
-|microbiologyevents|'subject_id', 'hadm_id', 'micro_specimen_id',
-                                    'chartdate', 'spec_type_desc', 'test_name',
-                                    'org_name', 'ab_name', 'comments','interpretation',
-                                    'dilution_text', 'dilution_comparison', 'dilution_value'|"antibiotic"|
+|microbiologyevents|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name','org_name', 'ab_name', 'comments','interpretation', 'dilution_text', 'dilution_comparison', 'dilution_value'|"antibiotic"|
 |labevents|||
 |patients|||
 |admissions|||
