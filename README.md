@@ -61,4 +61,7 @@ variables
 ||||
 
 
+**MIMIC-IV reference** \n
+[physionet dataset](https://physionet.org/content/mimiciv/2.2/)
+[article](https://www.nature.com/articles/s41597-022-01899-x)
 
