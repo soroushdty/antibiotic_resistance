@@ -28,7 +28,7 @@ CSV files used
 |[d_labitems](https://mimic.mit.edu/docs/iv/modules/hosp/d_labitems)|'itemid', 'label', 'fluid'|||
 |[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|'subject_id', 'gender', 'anchor_age'|||
 |[admissions](https://mimic.mit.edu/docs/iv/modules/hosp/admissions)|'subject_id', 'hadm_id', 'admittime', 'dischtime', 'admission_type', 'admission_location', 'discharge_location', 'marital_status', 'race', 'hospital_expire_flag'||mortality|
-|[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|'subject_id', 'chartdate', 'result_name', 'result_value'||BMI, BP|
+|[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|'subject_id', 'chartdate', 'result_name', 'result_value'|BMI, BP||
 |[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|'subject_id, 'hadm_id', 'stay_id', 'intime', 'outtime', 'los'|||
 
 hosp <br />
