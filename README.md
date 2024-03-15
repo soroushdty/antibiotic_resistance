@@ -31,22 +31,25 @@ CSV files used
 |[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|'subject_id', 'chartdate', 'result_name', 'result_value'|BMI, BP||
 |[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|'subject_id, 'hadm_id', 'stay_id', 'intime', 'outtime', 'los'|||
 |[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)|'subject_id', 'hadm_id', 'transfer_id', 'eventtype', 'careunit', 'intime', 'outtime'|||
+|[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)||||
+|[d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)||||
+|[datetimeevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimeevents)||||
+|||||
+|||||
+
 
 MEDICATION <br />
 [emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)
 [emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/emar_details)
 [pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)
 [prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)
+[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)
+[inputevents](https://mimic.mit.edu/docs/iv/modules/icu/inputevents)
 
-icu <br />
+IV FLUIDS
+[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)
+[inputevents](https://mimic.mit.edu/docs/iv/modules/icu/inputevents)
 
-[d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)
-[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)
-[datetimeevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimeevents)
-[Ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/Ingredientevents)
-[Inputevents](https://mimic.mit.edu/docs/iv/modules/icu/Inputevents)
-[outputevents](https://mimic.mit.edu/docs/iv/modules/icu/outputevents)
-[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)
 
 ### table 3
 variables
