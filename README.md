@@ -1,5 +1,9 @@
 # Antibiotic Resistance Prediction
 This vanilla version is trained on X test results (table 1) from ICU patients in the MIMIC-IV dataset.
+
+Microorganisms with at least 1000 cultures with at least 50 results for each antibiotic are included.
+
+
 The sample must be taken at least 48 hours after ICU admission
  
 
@@ -7,8 +11,8 @@ The sample must be taken at least 48 hours after ICU admission
 
 |Type|Frequency|spec_type_desc|test_name|
 |---|---|---|---|
-|Urine|545,738|'URINE'|'URINE CULTURE', 'FLUID CULTURE'|
-|Blood|104,344|'BLOOD CULTURE'|'Blood Culture, Routine', 'AEROBIC BOTTLE', 'ANAEROBIC BOTTLE', 'ANAEROBIC CULTURE'|
+|Urine|535,226|'URINE'|'URINE CULTURE', 'FLUID CULTURE'|
+|Blood|91,516|'BLOOD CULTURE'|'Blood Culture, Routine', 'AEROBIC BOTTLE', 'ANAEROBIC BOTTLE', 'ANAEROBIC CULTURE'|
 
 ### table 2: CSV Files
 
