@@ -1,4 +1,4 @@
-# antibiotic resistance prediction
+# Antibiotic Resistance Prediction
 This vanilla version is trained on X test results (table 1) from ICU patients in the MIMIC-IV dataset.
 The sample must be taken at least 48 hours after ICU admission
  
