@@ -3,7 +3,7 @@ This vanilla version is trained on X test results (table 1) from ICU patients in
 The sample must be taken at least 48 hours after ICU admission
 
 ### table 1
-<br /> Sample types
+Sample types
 
 |Sample type|Frequency|microbiologyevents.spec_type_desc|
 |---|---|---|
@@ -19,7 +19,7 @@ Blood (CMV AB)
 Immunology (CMV)
 
 ### table 2
-<br /> CSV files used
+CSV files used
 
 |CSV name|columns used|variable extracted|
 |---|---|---|
@@ -49,7 +49,7 @@ icu <br />
 [procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)
 
 ### table 3
-<br /> variables
+variables
 
 |variable type|variable name|csv used|
 |---|---|---|
