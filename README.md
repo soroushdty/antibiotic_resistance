@@ -21,15 +21,15 @@ Immunology (CMV)
 ### table 2
 CSV files used
 
-|CSV name|columns used|variable extracted|
-|---|---|---|
-|[microbiologyevents](https://mimic.mit.edu/docs/iv/modules/hosp/microbiologyevents)|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name', 'org_name', 'ab_name', 'interpretation', 'comments'|"antibiotic"|
+|CSV|columns|variables|metadata|
+|---|---|---|---|
+|[microbiologyevents](https://mimic.mit.edu/docs/iv/modules/hosp/microbiologyevents)|'subject_id', 'hadm_id', 'micro_specimen_id', 'chartdate', 'spec_type_desc', 'test_name', 'org_name', 'ab_name', 'interpretation', 'comments'|antibiotic||
 |[labevents](https://mimic.mit.edu/docs/iv/modules/hosp/labevents)|'subject_id', 'hadm_id', 'specimen_id', 'itemid', 'charttime', 'value', 'valuenum', 'valueuom', 'comments'||
-|[d_labitems](https://mimic.mit.edu/docs/iv/modules/hosp/d_labitems)|'itemid', 'label', 'fluid'||
-|[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|'subject_id', 'gender', 'anchor_age'||
-|[admissions](https://mimic.mit.edu/docs/iv/modules/hosp/admissions)|||
-|[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|||
-|[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|"subject_id", "hadm_id", "stay_id", "intime", "outtime", "los"||
+|[d_labitems](https://mimic.mit.edu/docs/iv/modules/hosp/d_labitems)|'itemid', 'label', 'fluid'|||
+|[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|'subject_id', 'gender', 'anchor_age'|||
+|[admissions](https://mimic.mit.edu/docs/iv/modules/hosp/admissions)|'subject_id', 'hadm_id', 'admittime', 'dischtime', 'admission_type', 'admission_location', 'discharge_location', 'marital_status', 'race', 'hospital_expire_flag'||mortality|
+|[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|'subject_id', 'chartdate', 'result_name', 'result_value'||BMI, BP|
+|[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|'subject_id, 'hadm_id', 'stay_id', 'intime', 'outtime', 'los'|||
 
 hosp <br />
 [transfers](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
