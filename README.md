@@ -31,7 +31,7 @@ CSV files used
 |[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|||
 ||||
 
-hosp \n
+hosp <b>
 [transfers](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 [emar](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 [emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
