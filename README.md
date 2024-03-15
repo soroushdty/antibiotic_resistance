@@ -29,7 +29,7 @@ CSV files used
 |[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|||
 |[admissions](https://mimic.mit.edu/docs/iv/modules/hosp/admissions)|||
 |[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|||
-||||
+|[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|"subject_id", "hadm_id", "stay_id", "intime", "outtime", "los"||
 
 hosp <br />
 [transfers](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
@@ -39,7 +39,7 @@ hosp <br />
 [prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/omr)
 
 icu <br />
-[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays) : subject_id hadm_id stay_id first_careunit last_careunit intime outtime los
+
 [d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)
 [chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)
 [datetimeevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimeevents)
