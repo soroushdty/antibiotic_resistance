@@ -1,7 +1,7 @@
 # Antibiotic Resistance Prediction
 This vanilla version is trained on X test results (table 1) from ICU patients in the MIMIC-IV dataset.
 
-Microorganisms with at least 1000 cultures with at least 50 results for each antibiotic are included.
+Microorganisms with at least 1000 cultures with at least 100 results for each antibiotic are included.
 
 
 The sample must be taken at least 48 hours after ICU admission
