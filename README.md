@@ -26,8 +26,8 @@ The sample must be taken at least 48 hours after ICU admission
 |[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)|subject_id, hadm_id, stay_id, charttime, itemid, value, valueuom, lownormalvalue, highnormalvalue|||
 |[d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)|itemid, label, linksto, category, unitname|||
 |[datetimesevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimesevents)|subject_id, hadm_id, stay_id, charttime, itemid, value|||
-|[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)||||
-|[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)||||
+|[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, amount, amountuom, rate, rateuom|||
+|[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, value, valueuom, patientweight|||
 |||||
 
 
