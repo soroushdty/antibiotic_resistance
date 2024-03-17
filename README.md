@@ -33,7 +33,7 @@ The sample must be taken at least 48 hours after ICU admission
 
 MEDICATION <br />
 [emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)
-[emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/emar_details)
+[emar_detail](https://mimic.mit.edu/docs/iv/modules/hosp/emar_detail)
 [pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)
 [prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)
 
