@@ -29,7 +29,8 @@ The sample must be taken at least 48 hours after ICU admission
 |[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)|subject_id, hadm_id, stay_id, charttime, itemid, value, valueuom, lownormalvalue, highnormalvalue|||
 |[d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)|itemid, label, linksto, category, unitname|||
 |[datetimesevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimesevents)|subject_id, hadm_id, stay_id, charttime, itemid, value|||
-|||||
+|[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)||||
+|[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)||||
 |||||
 
 
@@ -38,12 +39,6 @@ MEDICATION <br />
 [emar_details](https://mimic.mit.edu/docs/iv/modules/hosp/emar_details)
 [pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)
 [prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)
-[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)
-[inputevents](https://mimic.mit.edu/docs/iv/modules/icu/inputevents)
-
-IV FLUIDS
-[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)
-[inputevents](https://mimic.mit.edu/docs/iv/modules/icu/inputevents)
 
 
 ### table 3
