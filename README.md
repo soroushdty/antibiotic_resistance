@@ -28,7 +28,7 @@ The sample must be taken at least 48 hours after ICU admission
 |[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)|'subject_id', 'hadm_id', 'transfer_id', 'eventtype', 'careunit', 'intime', 'outtime'|||
 |[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)||||
 |[d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)||||
-|[datetimeevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimeevents)||||
+|[datetimesevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimesevents)||||
 |||||
 |||||
 
