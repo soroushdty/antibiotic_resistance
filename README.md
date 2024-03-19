@@ -29,7 +29,7 @@ The sample must be taken at least 48 hours after ICU admission
 |[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, amount, amountuom, rate, rateuom|*||
 |[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, value, valueuom, patientweight|*||
 |[emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)|subject_id, hadm_id, emar_id, pharmacy_id, charttime, medication, event_txt|**||
-|[emar_detail](https://mimic.mit.edu/docs/iv/modules/hosp/emar_detail)|subject_id, emar_id, administration_type, pharmacy_id|**||
+|[emar_detail](https://mimic.mit.edu/docs/iv/modules/hosp/emar_detail)|subject_id, emar_id, administration_type, pharmacy_id, dose_given, dose_given_unit, product_amount_given, product_unit, product_code, product_description, product_description_other, infusion_rate, infusion_rate_unit, route|**||
 |[pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)|subject_id, hadm_id, pharmacy_id, starttime, stoptime, medication, route, frequency, basal_rate, duration, duration_interval|**||
 |[prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)|subject_id, hadm_id, pharmacy_id, starttime, stoptime, drug, gsn, ndc, prod_strength, form_rx, dose_val_rx, dose_unit_rx, route|**||
 
