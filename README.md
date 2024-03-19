@@ -21,17 +21,17 @@ The sample must be taken at least 48 hours after ICU admission
 |[patients](https://mimic.mit.edu/docs/iv/modules/hosp/patients)|subject_id, gender, anchor_age|||
 |[admissions](https://mimic.mit.edu/docs/iv/modules/hosp/admissions)|subject_id, hadm_id, admittime, dischtime, admission_type, admission_location, discharge_location, marital_status, race, hospital_expire_flag||mortality|
 |[omr](https://mimic.mit.edu/docs/iv/modules/hosp/omr)|subject_id, chartdate, result_name, result_value|BMI, BP||
-|[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|subject_id, hadm_id, stay_id, intime, outtime, los|||
-|[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)|subject_id, hadm_id, transfer_id, eventtype, careunit, intime, outtime|||
-|[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)|subject_id, hadm_id, stay_id, charttime, itemid, value, valueuom, lownormalvalue, highnormalvalue|||
+|[icustays](https://mimic.mit.edu/docs/iv/modules/icu/icustays)|subject_id, hadm_id, stay_id, intime, outtime, los|*||
+|[transfers](https://mimic.mit.edu/docs/iv/modules/hosp/transfers)|subject_id, hadm_id, transfer_id, eventtype, careunit, intime, outtime|*||
+|[chartevents](https://mimic.mit.edu/docs/iv/modules/icu/chartevents)|subject_id, hadm_id, stay_id, charttime, itemid, value, valueuom, lownormalvalue, highnormalvalue|*||
 |[d_items](https://mimic.mit.edu/docs/iv/modules/icu/d_items)|itemid, label, linksto, category, unitname|||
-|[datetimesevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimesevents)|subject_id, hadm_id, stay_id, charttime, itemid, value|||
-|[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, amount, amountuom, rate, rateuom|||
-|[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, value, valueuom, patientweight|||
-|[emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)||||
-|[emar_detail](https://mimic.mit.edu/docs/iv/modules/hosp/emar_detail)||||
-|[pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)||||
-|[prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)||||
+|[datetimesevents](https://mimic.mit.edu/docs/iv/modules/icu/datetimesevents)|subject_id, hadm_id, stay_id, charttime, itemid, value|*||
+|[ingredientevents](https://mimic.mit.edu/docs/iv/modules/icu/ingredientevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, amount, amountuom, rate, rateuom|*||
+|[procedureevents](https://mimic.mit.edu/docs/iv/modules/icu/procedureevents)|subject_id, hadm_id, stay_id, starttime, endtime, itemid, value, valueuom, patientweight|*||
+|[emar](https://mimic.mit.edu/docs/iv/modules/hosp/emar)|subject_id, hadm_id, emar_id, pharmacy_id, charttime, medication, event_txt|**||
+|[emar_detail](https://mimic.mit.edu/docs/iv/modules/hosp/emar_detail)|subject_id, emar_id, administration_type, pharmacy_id|**||
+|[pharmacy](https://mimic.mit.edu/docs/iv/modules/hosp/pharmacy)|subject_id, hadm_id, pharmacy_id, starttime, stoptime, medication, route, frequency, basal_rate, duration, duration_interval|**||
+|[prescriptions](https://mimic.mit.edu/docs/iv/modules/hosp/prescriptions)|subject_id, hadm_id, pharmacy_id, starttime, stoptime, drug, gsn, ndc, prod_strength, form_rx, dose_val_rx, dose_unit_rx, route|**||
 
 
 
