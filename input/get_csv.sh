@@ -37,8 +37,6 @@ read -p "Do you want to delete all unnecessary files? (y/n): " answer
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
     rm *.csv.gz
     rm nrows.json
-    rm blood_positive.csv
-    rm urine_positive.csv
     echo "Files deleted."
     
 elif [[ "$answer" == "n" || "$answer" == "N" ]]; then
