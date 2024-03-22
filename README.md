@@ -3,6 +3,14 @@ This model is trained on X test results (table 1) from ICU patients in the MIMIC
 
 The sample must be taken at least 48 hours after ICU admission
  
+To run, first you must download the required CSV files from physionet. You only need to do this once.
+Clone the repository, change directory to input, and run get_csv bash script with your physionet username and pass word as arguments:
+
+```
+git clone https://github.com/soroushdty/antibiotic_resistance.git
+cd antibiotic_resistance/input
+bash get_csv.sh USERNAME PASSWORD
+```
 
 ### Table 1: Sample Types
 

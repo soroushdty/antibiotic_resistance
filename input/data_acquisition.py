@@ -1,11 +1,17 @@
+# Run this once after downloading all csv.gz files
+# To create necessary csv files
+
 # Perquisites
 import pandas as pd
 import gc
+import json
 from csv_list import csv_files, comments
+print('modules imported successfully')
 
 # Find microbiology results
 microbiology = pd.read_csv('microbiologyevents.csv.gz', compression='gzip', dtype=str,
                            usecols=csv_files['microbiologyevents'])
+print('micrbiologyevents.csv.gz loaded')
 
 # Specify test type
 microbiology = microbiology[((microbiology.spec_type_desc=='URINE')|
@@ -33,73 +39,98 @@ urine_negative = urine_negative[~urine_negative['comments'].apply(lambda x: any(
 blood_negative = blood_negative[~blood_negative['comments'].apply(lambda x: any(str(comment) in x for comment in comments['blood_negative']) if pd.notnull(x) else False)]
 
 # Drop unnecessary columns
-blood_positive = blood_positive.drop(['comments', 'org_name', 'ab_name', 'interpretation'], axis=1)
-blood_negative = blood_negative.drop(['comments', 'org_name', 'ab_name', 'interpretation'], axis=1)
-urine_positive = urine_positive.drop(['comments', 'org_name', 'ab_name', 'interpretation'], axis=1)
-urine_negative = urine_negative.drop(['comments', 'org_name', 'ab_name', 'interpretation'], axis=1)
+blood_positive = blood_positive.drop(['comments', 'org_name', 'ab_name'], axis=1)
+blood_negative = blood_negative.drop(['comments', 'org_name', 'ab_name'], axis=1)
+urine_positive = urine_positive.drop(['comments', 'org_name', 'ab_name'], axis=1)
+urine_negative = urine_negative.drop(['comments', 'org_name', 'ab_name'], axis=1)
 
 # Categorize test results (S/R)
-urine_sensitive = urine_positive[urine_positive.interpretation=='S']
-urine_resistant = urine_positive[urine_positive.interpretation=='R']
-blood_sensitive = blood_positive[blood_positive.interpretation=='S']
-blood_resistant = blood_positive[blood_positive.interpretation=='R']
+urine_sensitive = urine_positive[urine_positive.interpretation=='S'].drop(['interpretation'], axis=1)
+urine_resistant = urine_positive[urine_positive.interpretation=='R'].drop(['interpretation'], axis=1)
+blood_sensitive = blood_positive[blood_positive.interpretation=='S'].drop(['interpretation'], axis=1)
+blood_resistant = blood_positive[blood_positive.interpretation=='R'].drop(['interpretation'], axis=1)
+print('test result filtering completed')
 
-# Check length 
-print(f"blood_negative: {len(blood_negative)}")
-print(f"blood_sensitive: {len(blood_sensitive)}")
-print(f"blood_resistant: {len(blood_resistant)}")
-print(f"urine_negative: {len(urine_negative)}")
-print(f"urine_sensitive: {len(urine_sensitive)}")
-print(f"urine_resistant: {len(urine_resistant)}")
+# Save to csv
+blood_negative.to_csv('blood_negative.csv',index=False)
+print('blood_negative.csv saved successfully')
+blood_sensitive.to_csv('blood_sensitive.csv',index=False)
+print('blood_sensitive.csv saved successfully')
+blood_resistant.to_csv('blood_resistant.csv',index=False)
+print('blood_resistant.csv saved successfully')
+urine_negative.to_csv('urine_negative.csv',index=False)
+print('urine_negative.csv saved successfully')
+urine_sensitive.to_csv('urine_sensitive.csv',index=False)
+print('urine_sensitive.csv saved successfully')
+urine_resistant.to_csv('urine_resistant.csv',index=False)
+print('urine_resistant.csv saved successfully')
 
 # Create subject_id filter
 filter = pd.concat([blood_negative, blood_sensitive, blood_resistant,urine_negative,
                     urine_sensitive, urine_resistant]).subject_id.drop_duplicates()
+filter.to_csv('filter.csv',index=False)
+print('filter.csv created successfully')
 
 # Filter large CSV files
-large_csv = ['labevents', 'emar', 'emar_detail', 'chartevents', 'prescriptions', 'pharmacy', 'ingredientevents']
 c = {}
-for item in large_csv:
-    for chunk in pd.read_csv(f'{item}.csv.gz', compression='gzip', dtype=str,
-                                usecols=csv_files[item], chunksize=10 ** 6):
-        c[item] = chunk.merge(filter, how='inner', on=['subject_id'])
+chunksize = 10 ** 6
+
+with open('nrows.json', 'r') as f:
+    nrows = json.load(f)
+
+for k,v in nrows.items():
+    head = 0
+    print(f'Processing {k}:')
+    for chunk in pd.read_csv(f'{k}.csv.gz', compression='gzip', dtype=str,
+                                usecols=csv_files[k], chunksize=chunksize):
+        c[k] = chunk.merge(filter, how='inner', on=['subject_id'])
+        head += len(chunk)
+        print(f'Part {head//chunksize} out of {(int(v)//chunksize)+1}...')
         del chunk
         gc.collect()
-    c[item].to_csv(f'{item}.csv',index=False)
-# del c
+    c[k].to_csv(f'{k}.csv',index=False)
+    print(f'{k}.csv created.')
 
-# Load CSVs
-## load (filtered) large csvs as is
-labevents = pd.read_csv('labevents.csv', dtype=str)
-emar = pd.read_csv('emar.csv', dtype=str)
-emar_detail = pd.read_csv('emar_detail.csv', dtype=str)
-chartevents = pd.read_csv('chartevents.csv', dtype=str)
-prescriptions = pd.read_csv('prescriptions.csv', dtype=str)
-pharmacy = pd.read_csv('pharmacy.csv', dtype=str)
-ingredientevents = pd.read_csv('ingredientevents.csv', dtype=str)
-
-## load csvs without subject_id without filtering
-d_labitems = pd.read_csv('d_labitems.csv.gz', compression='gzip', usecols=csv_files['d_labitems'], dtype=str)
-d_items = pd.read_csv('d_items.csv.gz', compression='gzip', usecols=csv_files['d_items'], dtype=str)
-
-## load others with filtering
+# Filter smaller CSV files
 patients = pd.read_csv('patients.csv.gz', compression='gzip', usecols=csv_files['patients'], dtype=str)
 patients = patients.merge(filter, how='inner', on=['subject_id'])
+patients.to_csv('patients.csv', index=False)
+print('patients.csv created.')
 
 datetimeevents = pd.read_csv('datetimeevents.csv.gz', compression='gzip', usecols=csv_files['datetimeevents'], dtype=str)
 datetimeevents = datetimeevents.merge(filter, how='inner', on=['subject_id'])
+datetimeevents.to_csv('datetimeevents.csv', index=False)
+print('datetimeevents.csv created.')
 
 admissions = pd.read_csv('admissions.csv.gz', compression='gzip', usecols=csv_files['admissions'], dtype=str)
 admissions = admissions.merge(filter, how='inner', on=['subject_id'])
+admissions.to_csv('admissions.csv', index=False)
+print('admissions.csv created.')
 
 omr = pd.read_csv('omr.csv.gz', compression='gzip', usecols=csv_files['omr'], dtype=str)
 omr = omr.merge(filter, how='inner', on=['subject_id'])
+omr.to_csv('omr.csv', index=False)
+print('omr.csv created.')
 
 icustays = pd.read_csv('icustays.csv.gz', compression='gzip', usecols=csv_files['icustays'], dtype=str)
 icustays = icustays.merge(filter, how='inner', on=['subject_id'])
+icustays.to_csv('icustays.csv', index=False)
+print('icustays.csv created.')
 
 procedureevents = pd.read_csv('procedureevents.csv.gz', compression='gzip', usecols=csv_files['procedureevents'], dtype=str)
 procedureevents = procedureevents.merge(filter, how='inner', on=['subject_id'])
+procedureevents.to_csv('procedureevents.csv', index=False)
+print('procedureevents.csv created.')
 
 transfers = pd.read_csv('transfers.csv.gz', compression='gzip', usecols=csv_files['transfers'], dtype=str)
 transfers = transfers.merge(filter, how='inner', on=['subject_id'])
+transfers.to_csv('transfers.csv', index=False)
+print('transfers.csv created.')
+
+d_labitems = pd.read_csv('d_labitems.csv.gz', compression='gzip', usecols=csv_files['d_labitems'], dtype=str)
+d_labitems.to_csv('d_labitems.csv', index=False)
+print('d_labitems.csv created.')
+
+d_items = pd.read_csv('d_items.csv.gz', compression='gzip', usecols=csv_files['d_items'], dtype=str)
+d_items.to_csv('d_items.csv', index=False)
+print('d_items.csv created.')
