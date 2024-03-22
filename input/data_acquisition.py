@@ -39,10 +39,10 @@ urine_negative = urine_negative[~urine_negative['comments'].apply(lambda x: any(
 blood_negative = blood_negative[~blood_negative['comments'].apply(lambda x: any(str(comment) in x for comment in comments['blood_negative']) if pd.notnull(x) else False)]
 
 # Drop unnecessary columns
-blood_positive = blood_positive.drop(['comments', 'org_name', 'ab_name'], axis=1)
-blood_negative = blood_negative.drop(['comments', 'org_name', 'ab_name'], axis=1)
-urine_positive = urine_positive.drop(['comments', 'org_name', 'ab_name'], axis=1)
-urine_negative = urine_negative.drop(['comments', 'org_name', 'ab_name'], axis=1)
+blood_positive = blood_positive.drop(['comments'], axis=1)
+urine_positive = urine_positive.drop(['comments'], axis=1)
+blood_negative = blood_negative.drop(['comments', 'org_name', 'ab_name','interpretation'], axis=1)
+urine_negative = urine_negative.drop(['comments', 'org_name', 'ab_name','interpretation'], axis=1)
 
 # Categorize test results (S/R)
 urine_sensitive = urine_positive[urine_positive.interpretation=='S'].drop(['interpretation'], axis=1)
