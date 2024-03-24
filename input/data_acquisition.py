@@ -72,7 +72,7 @@ filter.to_csv('filter.csv',index=False)
 print('filter.csv created successfully')
 
 # Filter large CSV files
-c = {}
+c = {}  # WHY AM I USING A DICT HERE??
 chunksize = 10 ** 6
 
 with open('nrows.json', 'r') as f:
@@ -85,7 +85,7 @@ for k,v in nrows.items():
                                 usecols=csv_files[k], chunksize=chunksize):
         c[k] = chunk.merge(filter, how='inner', on=['subject_id'])
         head += len(chunk)
-        print(f'Part {head//chunksize} out of {(int(v)//chunksize)+1}...')
+        print(f'Part {head//chunksize} out of {(int(v)//chunksize)+1}...')  # WHY THIS DOESNT PRINT LAST CHUNK??
         del chunk
         gc.collect()
     c[k].to_csv(f'{k}.csv',index=False)
@@ -121,11 +121,6 @@ procedureevents = pd.read_csv('procedureevents.csv.gz', compression='gzip', usec
 procedureevents = procedureevents.merge(filter, how='inner', on=['subject_id'])
 procedureevents.to_csv('procedureevents.csv', index=False)
 print('procedureevents.csv created.')
-
-transfers = pd.read_csv('transfers.csv.gz', compression='gzip', usecols=csv_files['transfers'], dtype=str)
-transfers = transfers.merge(filter, how='inner', on=['subject_id'])
-transfers.to_csv('transfers.csv', index=False)
-print('transfers.csv created.')
 
 d_labitems = pd.read_csv('d_labitems.csv.gz', compression='gzip', usecols=csv_files['d_labitems'], dtype=str)
 d_labitems.to_csv('d_labitems.csv', index=False)

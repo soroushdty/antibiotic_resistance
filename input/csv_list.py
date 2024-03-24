@@ -8,14 +8,13 @@ csv_files = {
 'pharmacy':['subject_id', 'hadm_id', 'pharmacy_id','starttime', 'stoptime', 'medication', 'route', 'frequency', 'basal_rate', 'duration', 'duration_interval'],
 'patients':['subject_id', 'gender', 'anchor_age'],
 'datetimeevents':['subject_id', 'hadm_id', 'stay_id', 'charttime', 'itemid', 'value'],
-'admissions':['subject_id', 'hadm_id', 'admittime', 'dischtime', 'admission_type','admission_location', 'discharge_location', 'marital_status', 'race', 'hospital_expire_flag'],
+'admissions':['subject_id', 'hadm_id', 'admittime', 'dischtime', 'marital_status', 'race', 'hospital_expire_flag'],
 'omr':['subject_id', 'chartdate', 'result_name', 'result_value'],
 'icustays':['subject_id', 'hadm_id', 'stay_id', 'intime', 'outtime', 'los'],
 'd_labitems':['itemid', 'label', 'fluid'],
 'd_items':['itemid', 'label', 'linksto', 'category', 'unitname'],
-'ingredientevents':['subject_id', 'hadm_id', 'stay_id', 'starttime', 'endtime', 'itemid', 'amount', 'amountuom', 'rate', 'rateuom'],
-'procedureevents':['subject_id', 'hadm_id', 'stay_id', 'starttime', 'endtime', 'itemid', 'value', 'valueuom', 'patientweight'],
-'transfers':['subject_id', 'hadm_id', 'transfer_id', 'eventtype', 'careunit', 'intime', 'outtime']
+'inputevents':['subject_id', 'hadm_id', 'stay_id', 'starttime', 'endtime', 'itemid', 'amount', 'amountuom', 'rate', 'rateuom', 'ordercategoryname', 'patientweight'],
+'procedureevents':['subject_id', 'hadm_id', 'stay_id', 'starttime', 'endtime', 'itemid', 'value', 'valueuom', 'patientweight']
 }
 
 

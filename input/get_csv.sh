@@ -3,16 +3,16 @@
 url="https://physionet.org/files/mimiciv/2.2"
 
 csvs=(hosp/admissions icu/chartevents icu/d_items icu/datetimeevents
-hosp/d_labitems hosp/emar hosp/emar_detail icu/icustays hosp/pharmacy
-icu/ingredientevents hosp/labevents hosp/microbiologyevents hosp/omr
-hosp/patients hosp/prescriptions icu/procedureevents hosp/transfers)
+icu/icustays icu/inputtevents icu/procedureevents hosp/d_labitems
+hosp/emar hosp/emar_detail  hosp/pharmacy hosp/labevents
+hosp/microbiologyevents hosp/omr hosp/patients hosp/prescriptions)
 
 # Save csv.gz files
 for csv in ${csvs[@]}; do wget -c -np --user $1 --password $2 $url/$csv.csv.gz; done
 
 # Count rows of large files
 declare -A nrows
-for i in "labevents" "emar" "emar_detail" "chartevents" "prescriptions" "pharmacy" "ingredientevents"
+for i in "labevents" "emar" "emar_detail" "chartevents" "prescriptions" "pharmacy" "inputevents"
 do echo counting rows in "$i.csv.gz" && nrows["$i"]=$(zgrep -c $ "$i.csv.gz") && echo Done!; done
 
 keys=("${!nrows[@]}")
